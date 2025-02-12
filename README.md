@@ -40,6 +40,20 @@ with ThreadPoolExecutor(max_workers=4) as executor:
 
 ## Processing of JSON data
 ### Ingestion
+```
+def load_directory(source, configs, dataframe_collection):
+    src_path = ADLS_PATH_SRC + "/" + configs["src_directory"]
+    df_comp = spark.read.format("json").load(src_path)
+    dataframe_collection[source] = {"comp": df_comp}
+    print(f'Successfully loaded data from {configs["src_directory"]}')
+
+# Set up parallel execution
+with ThreadPoolExecutor(max_workers=4) as executor:
+    futures = [executor.submit(load_directory, source, configs, dataframe_collection) for source, configs in source_configs.items()]
+    for future in as_completed(futures):
+        future.result()
+```
+
 ### Exploding JSON
 ### Flattening JSON
 ### Standardizing schema and columns
