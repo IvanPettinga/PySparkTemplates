@@ -2,7 +2,7 @@
 Some basic PySpark templates for parallel processing of data
 
 ## Configuration
-All dataframes have a config dicitionary with their specific requirements.
+All dataframes have a config dictionary with their specific parameters. This can also be saved a JSON and imported or even stored in a database to collect your data parameters.
 
 ```
 dataframe_configs = {
