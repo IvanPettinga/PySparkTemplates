@@ -5,9 +5,14 @@ Some basic PySpark templates for parallel processing of data
 ### Setup of API call
 ### API call
 
-## Processing of data
+## Processing of JSON data
 ### Ingestion
 ### Exploding JSON
 ### Flattening JSON
 ### Standardizing schema and columns
-### Saving as parquet
+### Saving as Parquet
+
+## Processing of CSV data
+### Ingestion
+### Standardizing schema and columns
+### Saving as Parquet
