@@ -21,7 +21,7 @@ configs = {
 ```
 
 ## Parallisation
-This dictionary is interated over every code-block as as a loop. AS a result the operation is written as a function and executed using ThreatPoolExecutor. 
+This dictionary is interated over every code-block as as a loop. As a result the operation is written as a function and executed using ThreatPoolExecutor. 
 
 ```
 def function(source, configs, dataframe_collection):
