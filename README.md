@@ -44,7 +44,7 @@ with ThreadPoolExecutor(max_workers=4) as executor:
 def load_directory(source, configs, dataframe_collection):
     src_path = ADLS_PATH_SRC + "/" + configs["src_directory"]
     df_comp = spark.read.format("json").load(src_path)
-    dataframe_collection[source] = {"comp": df_comp}
+    dataframe_collection[source] = {"raw": df_raw}
     print(f'Successfully loaded data from {configs["src_directory"]}')
 
 # Set up parallel execution
