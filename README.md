@@ -21,7 +21,7 @@ configs = {
 ```
 
 ## Parallisation
-All dataframes are saves a dictionary with the following structure dataframe_dictionary = {<dataframe_name>{<version>;<dataframe>}}. This dictionary is interated over every code-block as as a loop. AS a result the operation is written as a function and executed using ThreatPoolExecutor. 
+All dataframes are saves a dictionary with the following structure dataframe_dictionary = {<dataframe_name>; {<version>;<dataframe>}}. This dictionary is interated over every code-block as as a loop. AS a result the operation is written as a function and executed using ThreatPoolExecutor. 
 
 ```
 def function(source, configs, dataframe_collection):
