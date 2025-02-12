@@ -1,7 +1,7 @@
 # PySparkTemplates
 Some basic PySpark templates for parallel processing of data
 
-##Configuration
+## Configuration
 All dataframes have a config dicitionary with their specific requirements.
 
 ```
